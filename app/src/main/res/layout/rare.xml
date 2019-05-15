@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Rare">
+
+    <EditText
+        android:id="@+id/rmb"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:gravity="center"
+        android:text="请在上方输入"
+        android:textSize="40sp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/dollar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:onClick="abc"
+        android:text="dollar"
+        android:textSize="24sp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/pound"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:onClick="abc"
+        android:text="pound"
+        android:textSize="24sp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/won"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="center"
+        android:onClick="abc"
+        android:text="won"
+        android:textSize="24sp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:onClick="openOne"
+        android:text="next"
+        android:textSize="24sp" />
+
+</LinearLayout>
