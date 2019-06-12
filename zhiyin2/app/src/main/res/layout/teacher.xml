@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教师资料"
+        android:textSize="20dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+<ScrollView
+    android:id="@+id/scrollViewTeacher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/texta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教师A"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/imagefengge"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/fengge" />
+
+    <TextView
+        android:id="@+id/textfengge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="ZY的大boss"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/textb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教师B"
+        android:textSize="16dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/imageruige"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ruige" />
+
+    <TextView
+        android:id="@+id/textruige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="一位贴心又温暖的老（沙）师（雕）"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/textc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教师C"
+        android:textSize="16dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/imageerwa"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/erwa" />
+
+    <TextView
+        android:id="@+id/texterwa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="最帅的小姐姐"
+        android:textSize="16dp"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

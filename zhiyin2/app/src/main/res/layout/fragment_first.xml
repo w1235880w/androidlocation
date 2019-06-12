@@ -6,145 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+
 
         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical">
-    <!-- TODO: Update blank fragment layout -->
-                <TextView
-                    android:id="@+id/itemNameTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|center"
-                    android:gravity="center"
-                    android:text="古剑奇谭一：琴心剑魄今何在"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="26sp"
-                    android:layout_marginBottom="20dp"/>
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/f_f_fengmian" />
-
-                <TextView
-                    android:id="@+id/itemSDTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="游戏设定"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/itemSDnrTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="        游戏主题\n
-       初代《古剑奇谭》的游戏主题，正是“重生”二字。道家讲求一切“顺其自然”，“重生”则无疑是逆天而行之事——那是一种在烈焰中蜕变的过程，是一种异常艰辛的努力和追寻。相比肉身的死而复生，“重生”二字更多指代灵魂与情感的新生。\n\n
-       世界观\n
-       上古人类刀耕火种的时代，在龙渊之地，有一个天生强悍的部族。他们以禁断之术，铸造出七柄极具威胁的凶煞之剑。此举惊动了天神伏羲，意欲将这些逆天而为的人们灭杀，仁爱的女娲却究竟不忍，她带领着追随自己的人们，将七柄凶剑封印于人间，又为避免天神伏羲对人类的追究，而带着龙渊的人们进入无尽幽暗的地界。数千年后，凶剑上女娲的封印之力渐渐衰减。\n\n
-       故事背景\n
-       《古剑奇谭》游戏的背景设定来源于中国古代的神话传说，主要取材于《山海经》。伏羲、女娲、神农、蚩尤甚至衔烛之龙等，众多大家耳熟能详的神话角色都在世界观中占有重要地位。而游戏故事发生的时代背景，大致相当于唐朝。虽然采用架空的历史设定，在其中融入了众多真实的人文地理风貌，通过合适的方式，将这些带有浓郁古韵和中国韵味的风物呈现在玩家的眼前。并选用了淡柔的色彩风格，匹配较为写实的贴图材质，和真实比例的场景建模，佐以雾效、景深等程序支持，描绘出了一个风格清丽、古韵浓郁的游戏世界。"
-                    android:textSize="16sp" />
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- TODO: Update blank fragment layout -->
 
         <TextView
-            android:id="@+id/itemPeoTitle"
+            android:id="@+id/itemNameTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="人物设定"
+            android:layout_gravity="top|center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="首页"
             android:textColor="@color/colorPrimary"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/itemPeoImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="right"
-            android:src="@drawable/f_p_bailitusu"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/itemPeojsTitle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="        百里屠苏\n
-       沉默寡言，性格坚毅的少\n年。百里屠苏总是刻意和他人\n保持一定的距离，他唯一信赖\n的伙伴，只有站在他肩头的猎\n鹰。不过这头猎鹰据说因为喜食猪肉，在与百里屠苏踏入凡尘后没多久，多次被路人误以为是一头芦花母鸡……百里屠苏性格坚毅、沉默寡言，内心仍然怀有少年人的心性，在不经意间流露出一些小脾气和小习惯，也能让人感受到他温情有趣的一面。"
-            android:layout_marginTop="50dp"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-                <TextView
-                    android:id="@+id/itemAddTitle"
+            android:textSize="24sp" />
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="场景设定"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+            <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/f_f_fengmian" />
 
-                <ImageView
-                    android:id="@+id/itemAddImage"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/f_a_jiangdu"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/itemAddjsTitle"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="        江都\n
-       繁花似锦的江南古驿道，\n乘坐渡船渡过长江，到传说中\n唐代最繁华的古城江都，一览\n“天下三分明月夜，二分无赖是\n扬州”的盛景。在以往作品中，我们不乏见到各色城镇的夜景，仅仅是用昏暗的色调处理成夜间的效果，而在《古剑奇谭》的世界中，凭借烛龙强大的技术实力配合优秀的游戏引擎，让夜景的渲染达到了前所未有的高度，淡淡的月光折射在不同的物体上会产生相应的变化，更加符合朦胧月色下的别样效果，而建筑物中的灯光效果不再是场景的摆设，它们将会给玩家的体验过程带来惊喜的效果。"
-                    android:layout_marginTop="50dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="200dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
-                android:id="@+id/itemDDTTitle"
+                android:id="@+id/textinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="20dp"
-                android:text="大地图"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
-            <ImageView
-                android:id="@+id/imageDDTView"
-                android:layout_width="380dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:src="@drawable/f_d_daditu" />
-           </LinearLayout>
-    </ScrollView>
+                android:layout_gravity="top|left"
+                android:text="基本资料"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonteacher"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinfo"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="教师资料"
+                android:background="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonpay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonteacher"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/background_light"
+                android:gravity="center"
+                android:onClick="onClickPay"
+                android:text="费用详情"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonguitar"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonpay"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="吉他资料"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonother"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:layout_below="@id/buttonguitar"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="用品简介"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttoncourse"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonother"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="网课资料"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonmarket"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttoncourse"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="知音商城"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+        </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+
 </FrameLayout>
