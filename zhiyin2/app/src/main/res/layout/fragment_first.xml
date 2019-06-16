@@ -34,8 +34,8 @@
             <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/f_f_fengmian" />
+            android:layout_height="200dp"
+            android:src="@drawable/zyfm1" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -45,7 +45,8 @@
             <View
                 android:id="@+id/line"
                 android:layout_width="1dp"
-                android:layout_height="200dp"
+                android:layout_height="400dp"
+                android:layout_centerHorizontal="true"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -80,7 +81,6 @@
                 android:layout_marginTop="5dp"
                 android:background="@android:color/background_light"
                 android:gravity="center"
-                android:onClick="onClickPay"
                 android:text="费用详情"
                 android:textSize="18sp" />
 
@@ -126,6 +126,86 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="知音商城"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textinfonow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210dp"
+                android:text="近期活动"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonjune"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinfo"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="210dp"
+                android:text="六月活动"
+                android:background="@android:color/background_light"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonmay"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonteacher"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/background_light"
+                android:layout_marginLeft="210dp"
+                android:gravity="center"
+                android:text="五月活动"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonapril"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonpay"
+                android:gravity="center"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="5dp"
+                android:text="四月活动"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonmarch"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:layout_below="@id/buttonguitar"
+                android:layout_marginLeft="210dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="三月活动"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonfeburary"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonother"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="210dp"
+                android:text="二月活动"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonjanuary"
+                android:layout_width="200dp"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttoncourse"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="210dp"
+                android:text="一月活动"
                 android:textSize="18sp" />
 
 

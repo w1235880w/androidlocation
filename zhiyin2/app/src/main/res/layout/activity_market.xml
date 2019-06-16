@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Market">
+    <TextView
+        android:id="@+id/textmarketjj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="知音商城"
+        android:textSize="20dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imagemartin"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/textmarketjj"
+        app:srcCompat="@drawable/Martin" />
+    <TextView
+        android:id="@+id/textmartinjj"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Martin"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imagemartin"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imagetaylor"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/textmartinjj"
+        app:srcCompat="@drawable/Taylor" />
+    <TextView
+        android:id="@+id/texttaylorjj"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Taylor"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imagetaylor"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imagecort"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/textmarketjj"
+        android:layout_marginLeft="210dp"
+        app:srcCompat="@drawable/cort" />
+    <TextView
+        android:id="@+id/textcortjj"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Cort"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imagecort"
+        android:layout_marginLeft="210dp"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imageyamaha"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="210dp"
+        android:layout_below="@id/textcortjj"
+        app:srcCompat="@drawable/xn" />
+    <TextView
+        android:id="@+id/textyamahajj"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Yamaha"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imageyamaha"
+        android:layout_marginLeft="210dp"
+        android:textColor="@color/colorPrimary"/>
+
+
+</RelativeLayout>

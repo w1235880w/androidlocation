@@ -11,7 +11,7 @@ import android.widget.Button;
 
 
 public class FirstFragment extends Fragment {
-    private Button teacher,pay;
+    private Button teacher,pay,guitar,other,course,market,june;
 
 
     @Override
@@ -32,21 +32,42 @@ public class FirstFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        guitar=(Button)view.findViewById(R.id.buttonguitar);
+        guitar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Guitar.class);
+                startActivity(intent);
+            }
+        });
+        other=(Button)view.findViewById(R.id.buttonother);
+        other.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Other.class);
+                startActivity(intent);
+            }
+        });
+        course=(Button)view.findViewById(R.id.buttoncourse);
+        course.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Cour.class);
+                startActivity(intent);
+            }
+        });
+        market=(Button)view.findViewById(R.id.buttonmarket);
+        market.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Market.class);
+                startActivity(intent);
+            }
+        });
+        june=(Button)view.findViewById(R.id.buttonjune);
+        june.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),June.class);
+                startActivity(intent);
+            }
+        });
         return view;
-    }
-
-    //    public void onViewCreated(View view, Bundle savedInstanceState){
-//        super.onViewCreated(view,savedInstanceState);
-//    public void onClickTeacher(View view) {
-//        Intent i = new Intent(getActivity(), Teacher.class);
-//        startActivity(i);
-//    }
-
-//}
-    
-    public void onClickPay(View v) {
-        Intent i = new Intent(getActivity(),Pay.class);
-        startActivity(i);
     }
 
 }

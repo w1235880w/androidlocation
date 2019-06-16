@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Guitar">
+
+    <TextView
+        android:id="@+id/textguitarjj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="吉他简介"
+        android:textSize="20dp"
+        android:gravity="top|center"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/textguitarjjgz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="吉他构造"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imageguitarjtgz"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/gouzao" />
+    <TextView
+        android:id="@+id/textguitarjjlx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="吉他类型"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:id="@+id/imageguitarjtlx"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/shape" />
+
+
+</LinearLayout>
