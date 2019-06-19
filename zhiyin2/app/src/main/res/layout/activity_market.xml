@@ -18,7 +18,7 @@
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_below="@id/textmarketjj"
-        app:srcCompat="@drawable/Martin" />
+        app:srcCompat="@drawable/martin" />
     <TextView
         android:id="@+id/textmartinjj"
         android:layout_width="200dp"
@@ -35,7 +35,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/textmartinjj"
-        app:srcCompat="@drawable/Taylor" />
+        app:srcCompat="@drawable/taylor" />
     <TextView
         android:id="@+id/texttaylorjj"
         android:layout_width="200dp"
@@ -71,7 +71,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="210dp"
         android:layout_below="@id/textcortjj"
-        app:srcCompat="@drawable/xn" />
+        app:srcCompat="@drawable/yamaha" />
     <TextView
         android:id="@+id/textyamahajj"
         android:layout_width="200dp"

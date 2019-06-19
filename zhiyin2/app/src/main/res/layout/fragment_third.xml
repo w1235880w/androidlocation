@@ -5,156 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ThirdFragment">
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <!-- TODO: Update blank fragment layout -->
-            <TextView
-                android:id="@+id/itemNameTitle3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center"
-                android:gravity="center"
-                android:text="古剑奇谭三：梦付千秋星垂野"
-                android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
-                android:layout_marginBottom="20dp"/>
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/t_f_fengmian2" />
-
-            <TextView
-                android:id="@+id/itemSDTitle3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="游戏设定"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/itemSDnrTitle3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="        世界观\n
-       古剑系列在古剑一的时候确立好了世界观，之后经过古剑二、古剑OL的延续和增补，整个世界设定已经变得较为庞大。一代时设计的世界观都还有很多内容并没有完整展现出来。而古剑一、古剑二、古剑OL的年代选取相对接近，所以这一次要去更远的时空看一看，领略不同的风土人情。\n
-       故事方面对比系列前作将有一部分不同的结构和表述方式，由于情节上的微小联系，会请一代个别主角出场客串一下。而“昆仑玉隐，龙去鼎湖”则是故事的大背景之一，之后的情节展开也与此多有联系。\n
-       在《古剑奇谭》的世界中，天、地、人三界的所在被称为“常世”，而与常世相反的巨大空间则是“魔域”。"
-                android:textSize="16sp" />
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-                <TextView
-                    android:id="@+id/itemPeoTitle3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="人物设定"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginTop="20dp"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/itemPeoImage3"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/t_p_beiluo"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/itemPeojsTitle3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="        北洛\n
-       北洛虽然同样继承了辟邪\n王族的血脉，却是因故在幼时\n流落人界，一直没有再回到魔\n域。他被寻回辟邪王城中，旋即得到了“继位”的嘱托。但北洛对此却十分抗拒，不愿接受这样的安排并意图离开。"
-                    android:layout_marginTop="50dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </android.support.constraint.ConstraintLayout>
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
-                <TextView
-                    android:id="@+id/itemAddTitle3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="场景设定"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/itemAddImage3"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/t_a_yaoyewan"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/itemAddjsTitle3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="        遥夜湾\n
-       遥夜湾是一个沙与海相接\n的奇丽空间，日月悬于天穹，\n并称“经天轮”。在这里生活的\n族群叫做寄灵族，他们时常乘着骆驼横越沙海。寄灵族可以使用术法，族长风里霜带领着族人守一方生存之地。"
-                    android:layout_marginTop="50dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </android.support.constraint.ConstraintLayout>
-            <TextView
-                android:id="@+id/itemDDTTitle3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="20dp"
-                android:text="大地图"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
-            <ImageView
-                android:id="@+id/imageDDTView3"
-                android:layout_width="380dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:src="@drawable/t_d_daditu" />
-            <ImageView
-                android:id="@+id/imageDDT2View3"
-                android:layout_width="380dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:src="@drawable/t_d_daditu2" />
-            <ImageView
-                android:id="@+id/imageDDT3View3"
-                android:layout_width="380dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:src="@drawable/t_d_daditu3" />
-        </LinearLayout>
-    </ScrollView>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:text="承墨"
+        android:gravity="center"/>
+    <Button
+    android:id="@+id/appointcourse"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="预约课程"
+    android:textSize="24dp"
+    android:layout_below="@id/username"
+    android:layout_marginTop="50sp"
+    android:gravity="left|center"
+    android:background="@android:color/background_light"/>
+    <Button
+        android:id="@+id/coursecontinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="课程续费"
+        android:textSize="24dp"
+        android:layout_below="@id/appointcourse"
+        android:layout_marginTop="1sp"
+        android:gravity="left|center"
+        android:background="@android:color/background_light"/>
+    <Button
+        android:id="@+id/changepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:textSize="24dp"
+        android:layout_below="@id/coursecontinue"
+        android:layout_marginTop="1sp"
+        android:gravity="left|center"
+        android:background="@android:color/background_light"/>
+    <Button
+        android:id="@+id/exitlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登录"
+        android:textSize="24dp"
+        android:layout_below="@id/changepass"
+        android:layout_marginTop="1sp"
+        android:gravity="left|center"
+        android:background="@android:color/background_light"/>
+</RelativeLayout>
 </FrameLayout>
