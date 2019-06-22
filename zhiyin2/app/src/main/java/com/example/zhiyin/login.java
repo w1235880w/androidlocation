@@ -28,10 +28,6 @@ import rx.Subscription;
 public class Login extends AppCompatActivity {
     private Button btnlogin;
 
-    private Button btnregister;
-
-    private Button btndelete;
-
     private Button btnupdate;
 
     private EditText txtusername;
@@ -73,7 +69,13 @@ public class Login extends AppCompatActivity {
         //String userName="123";
         query.addWhereEqualTo("stuName",userName);//增加查询条件
         query.setLimit(2);
-        query.findObjects(this, new FindListener<Student>() {
+        query.findObjects(new FindListener<Student>() {
+
+            @Override
+            public void done(List<Student> list, BmobException e) {
+                onError();
+                onSuccess();
+            }
 
             public void onError(int arg0, String arg1) {
                 // TODO Auto-generated method stub
@@ -99,8 +101,14 @@ public class Login extends AppCompatActivity {
         Student user =new Student();
         user.setObjectId(ObjectId);
         user.setPassword(txtpassword.getText().toString());
-        user.update(Login.this, new UpdateListener() {
+        user.update(new UpdateListener() {
 
+
+            @Override
+            public void done(BmobException e) {
+                onSuccess();
+                onFailure();
+            }
 
             public void onSuccess() {
                 // TODO Auto-generated method stub
