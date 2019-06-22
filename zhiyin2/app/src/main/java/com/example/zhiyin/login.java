@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
@@ -21,6 +23,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
+import rx.Subscription;
 
 public class Login extends AppCompatActivity {
     private Button btnlogin;
@@ -68,24 +71,23 @@ public class Login extends AppCompatActivity {
         BmobQuery<Student> query=new BmobQuery<Student>();
         String userName=txtusername.getText().toString();
         //String userName="123";
-        query.addWhereEqualTo("name",userName);//增加查询条件
+        query.addWhereEqualTo("stuName",userName);//增加查询条件
         query.setLimit(2);
         query.findObjects(this, new FindListener<Student>() {
 
             public void onError(int arg0, String arg1) {
                 // TODO Auto-generated method stub
-                Toast.makeText(Login.this, arg1,20*1000).show();
+                Toast.makeText(Login.this, arg1, 20 * 1000).show();
             }
 
-            public void onSuccess(List<User> list) {
+            public void onSuccess(List<Student> list) {
                 // TODO Auto-generated method stub
-                User user=list.get(0);//获取User对象
-                if(user.getPassword().equals(txtpassword.getText().toString())){
-                    Toast.makeText(Login.this, "login success",3*1000).show();
-                    ObjectId=list.get(0).getObjectId();
-                }
-                else{
-                    Toast.makeText(Login.this, "password error",3*1000).show();
+                Student user = list.get(0);//获取Student对象
+                if (user.getPassword().equals(txtpassword.getText().toString())) {
+                    Toast.makeText(Login.this, "login success", 3 * 1000).show();
+                    ObjectId = list.get(0).getObjectId();
+                } else {
+                    Toast.makeText(Login.this, "password error", 3 * 1000).show();
                 }
 
             }
@@ -94,18 +96,20 @@ public class Login extends AppCompatActivity {
 
 
     private void doUpdate(){//更新密码
-        User user =new User();
+        Student user =new Student();
         user.setObjectId(ObjectId);
         user.setPassword(txtpassword.getText().toString());
         user.update(Login.this, new UpdateListener() {
 
+
             public void onSuccess() {
                 // TODO Auto-generated method stub
-                Toast.makeText(Login.this, "update success",3*1000).show();
+                Toast.makeText(Login.this, "update success", 3 * 1000).show();
             }
+
             public void onFailure(int arg0, String arg1) {
                 // TODO Auto-generated method stub
-                Toast.makeText(Login.this, arg1,3*1000).show();
+                Toast.makeText(Login.this, arg1, 3 * 1000).show();
             }
         });
     }

@@ -1,6 +1,10 @@
 package com.example.zhiyin;
+import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.listener.UpdateListener;
 
-class Student {
+
+public class Student extends BmobObject{
+
     private String name;
     private String password;
 
@@ -19,5 +23,7 @@ class Student {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 
 }

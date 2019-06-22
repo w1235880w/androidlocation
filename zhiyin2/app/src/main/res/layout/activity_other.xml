@@ -52,7 +52,7 @@
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_below="@id/textguitarjj"
-        android:layout_marginLeft="210dp"
+        android:layout_alignParentRight="true"
         app:srcCompat="@drawable/tyq" />
     <TextView
         android:id="@+id/texttyqjj"
@@ -63,14 +63,14 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:layout_below="@id/imagetyq"
-        android:layout_marginLeft="210dp"
+        android:layout_alignParentRight="true"
         android:textColor="@color/colorPrimary"/>
     <ImageView
         android:id="@+id/imagexn"
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="210dp"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/texttyqjj"
         app:srcCompat="@drawable/xn" />
     <TextView
@@ -82,7 +82,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:layout_below="@id/imagexn"
-        android:layout_marginLeft="210dp"
+        android:layout_alignParentRight="true"
         android:textColor="@color/colorPrimary"/>
 
 
