@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -19,6 +21,9 @@ import android.widget.TextView;
  */
 public class ThirdFragment extends Fragment {
     private Button exitlogin,appointcourse;
+    private TextView username;
+    String stuName="";
+
 
     public ThirdFragment() {
         // Required empty public constructor
@@ -43,6 +48,9 @@ public class ThirdFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        username=(TextView)view.findViewById(R.id.username);
+        stuName= String.valueOf(getActivity().getIntent().getStringExtra("stuname"));
+        username.setText(stuName);
         return view;
         }
 

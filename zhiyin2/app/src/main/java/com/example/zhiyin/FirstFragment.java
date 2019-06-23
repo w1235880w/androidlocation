@@ -3,16 +3,18 @@ package com.example.zhiyin;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class FirstFragment extends Fragment {
     private Button teacher,pay,guitar,other,course,market,june;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

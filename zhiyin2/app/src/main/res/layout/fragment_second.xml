@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
     tools:context=".SecondFragment">
 
 <RelativeLayout
@@ -17,14 +18,24 @@
         android:textSize="30dp"
         android:gravity="center"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="80dp"/>
     <TextView
-        android:id="@+id/first"
+        android:id="@+id/appointdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="还未约课哦"
         android:textSize="20dp"
+        android:gravity="center"
         android:layout_marginTop="40dp"
         android:layout_below="@id/courselist"/>
+    <TextView
+        android:id="@+id/appointtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="快去吧"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/appointdate"/>
 </RelativeLayout>
 </FrameLayout>

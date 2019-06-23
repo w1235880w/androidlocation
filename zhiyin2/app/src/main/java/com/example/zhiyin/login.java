@@ -1,38 +1,26 @@
 package com.example.zhiyin;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
-import cn.bmob.v3.Bmob;
-import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
-import cn.bmob.v3.listener.UpdateListener;
-import rx.Subscription;
 
 public class Login extends AppCompatActivity {
     private Button btnlogin;
 
-    private Button btnupdate;
+    private Button btnzc;
 
-    private EditText txtusername;
+    private EditText stuusername;
 
-    private EditText txtpassword;
+    private EditText stupassword;
 
     private String ObjectId;
 
@@ -40,87 +28,59 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        txtpassword = (EditText) findViewById(R.id.edittextstupass);
-        txtusername = (EditText) findViewById(R.id.edittextstuname);
-        btnlogin =(Button)findViewById(R.id.buttonlogin);
-        btnupdate = (Button)findViewById(R.id.buttonupdate);
-
+        stupassword = (EditText) findViewById(R.id.edittextstupass);
+        stuusername = (EditText) findViewById(R.id.edittextstuname);
+        btnlogin = (Button) findViewById(R.id.buttonlogin);
+        btnzc = (Button) findViewById(R.id.buttonzc);
         btnlogin.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                doLogin();
+            @Override
+            public void onClick(View v) {
+                String stuname =  stuusername.getText().toString();
+                Intent intent2=new Intent();
+                Bundle bundle2=new Bundle();
+                bundle2.putString("stuname",stuname);
+                intent2.putExtras(bundle2);
+                intent2.setClass(Login.this,MainActivity.class);
+                startActivityForResult(intent2,1);
             }
         });
-
-        btnupdate.setOnClickListener(new View.OnClickListener() {
-
+        btnzc.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                doUpdate();
+            public void onClick(View v) {
+                String stuname =  stuusername.getText().toString();
+                Intent intent3=new Intent();
+                Bundle bundle3=new Bundle();
+                bundle3.putString("stuname",stuname);
+                intent3.putExtras(bundle3);
+                intent3.setClass(Login.this,MainActivity.class);
+                startActivityForResult(intent3,1);
             }
         });
     }
+    public void btnLogin(View v) {
+        final String username = stuusername.getText().toString();
+        final String password = stupassword.getText().toString();
 
-    private void doLogin(){//登录
-        BmobQuery<Student> query=new BmobQuery<Student>();
-        String userName=txtusername.getText().toString();
-        //String userName="123";
-        query.addWhereEqualTo("stuName",userName);//增加查询条件
-        query.setLimit(2);
-        query.findObjects(new FindListener<Student>() {
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
+            Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(this,MainActivity.class);
+        Toast.makeText(Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
 
-            @Override
-            public void done(List<Student> list, BmobException e) {
-                onError();
-                onSuccess();
-            }
-
-            public void onError(int arg0, String arg1) {
-                // TODO Auto-generated method stub
-                Toast.makeText(Login.this, arg1, 20 * 1000).show();
-            }
-
-            public void onSuccess(List<Student> list) {
-                // TODO Auto-generated method stub
-                Student user = list.get(0);//获取Student对象
-                if (user.getPassword().equals(txtpassword.getText().toString())) {
-                    Toast.makeText(Login.this, "login success", 3 * 1000).show();
-                    ObjectId = list.get(0).getObjectId();
-                } else {
-                    Toast.makeText(Login.this, "password error", 3 * 1000).show();
-                }
-
-            }
-        });
     }
+    public void btnZc(View v) {
+        final String username = stuusername.getText().toString();
+        final String password = stupassword.getText().toString();
 
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
+            Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(this,MainActivity.class);
+        Toast.makeText(Login.this, "注册成功", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
 
-    private void doUpdate(){//更新密码
-        Student user =new Student();
-        user.setObjectId(ObjectId);
-        user.setPassword(txtpassword.getText().toString());
-        user.update(new UpdateListener() {
-
-
-            @Override
-            public void done(BmobException e) {
-                onSuccess();
-                onFailure();
-            }
-
-            public void onSuccess() {
-                // TODO Auto-generated method stub
-                Toast.makeText(Login.this, "update success", 3 * 1000).show();
-            }
-
-            public void onFailure(int arg0, String arg1) {
-                // TODO Auto-generated method stub
-                Toast.makeText(Login.this, arg1, 3 * 1000).show();
-            }
-        });
     }
-
-
 }

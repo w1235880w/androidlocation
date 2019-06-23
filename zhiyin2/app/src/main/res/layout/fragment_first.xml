@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"
+    android:background="#FFFFFF">
 
 
 
@@ -45,7 +46,7 @@
             <View
                 android:id="@+id/line"
                 android:layout_width="1dp"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
                 android:layout_centerHorizontal="true"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintEnd_toEndOf="parent"

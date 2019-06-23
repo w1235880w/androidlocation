@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textlogin"
         android:layout_marginTop="20dp"
+        android:text="承墨"
         android:layout_marginLeft="170dp"/>
     <TextView
         android:id="@+id/textstupass"
@@ -46,6 +47,7 @@
         android:id="@+id/edittextstupass"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:text="123"
         android:layout_below="@id/edittextstuname"
         android:layout_marginLeft="170dp"
         android:inputType="textPassword" />
@@ -62,6 +64,7 @@
     <EditText
         android:id="@+id/edittextstucourse"
         android:layout_width="150dp"
+        android:text="月课"
         android:layout_height="wrap_content"
         android:layout_below="@id/edittextstupass"
         android:layout_marginLeft="170dp"/>
@@ -72,15 +75,17 @@
         android:layout_below="@id/edittextstucourse"
         android:text="登陆"
         android:textSize="20dp"
+        android:onClick="btnLogin"
         android:layout_marginLeft="50dp"
         android:layout_alignParentLeft="true"/>
     <Button
-        android:id="@+id/buttonupdate"
+        android:id="@+id/buttonzc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edittextstucourse"
         android:layout_marginRight="50dp"
-        android:text="忘记密码"
+        android:text="注册"
+        android:onClick="btnZc"
         android:textSize="20dp"
         android:layout_alignParentRight="true"/>
 </RelativeLayout>
