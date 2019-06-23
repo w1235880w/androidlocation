@@ -40,10 +40,11 @@ public class AppointCourse extends AppCompatActivity {
                 Bundle bundle=new Bundle();
                 bundle.putString("appointdate",appointdate);
                 bundle.putString("appointtime",appointtime);
+                bundle.putString("stuname","承墨");
                 intent.putExtras(bundle);
-                    intent.setClass(AppointCourse.this,MainActivity.class);
-                    Toast.makeText(getBaseContext(),"预约成功",Toast.LENGTH_SHORT).show();
-                    startActivityForResult(intent,1);
+                intent.setClass(AppointCourse.this,MainActivity.class);
+                Toast.makeText(getBaseContext(),"预约成功",Toast.LENGTH_SHORT).show();
+                startActivityForResult(intent,1);
             }
         });
     }
