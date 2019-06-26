@@ -22,7 +22,6 @@ public class Login extends AppCompatActivity {
 
     private EditText stupassword;
 
-    private String ObjectId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,51 +35,41 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String stuname =  stuusername.getText().toString();
+                final String password = stupassword.getText().toString();
+
+                if (TextUtils.isEmpty(stuname) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Toast.makeText(Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
                 Intent intent2=new Intent();
                 Bundle bundle2=new Bundle();
                 bundle2.putString("stuname",stuname);
                 intent2.putExtras(bundle2);
                 intent2.setClass(Login.this,MainActivity.class);
                 startActivityForResult(intent2,1);
+                finish();
             }
         });
         btnzc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String stuname =  stuusername.getText().toString();
+                final String password = stupassword.getText().toString();
+
+                if (TextUtils.isEmpty(stuname) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Toast.makeText(Login.this, "注册成功", Toast.LENGTH_SHORT).show();
                 Intent intent3=new Intent();
                 Bundle bundle3=new Bundle();
                 bundle3.putString("stuname",stuname);
                 intent3.putExtras(bundle3);
                 intent3.setClass(Login.this,MainActivity.class);
                 startActivityForResult(intent3,1);
+                finish();
             }
         });
-    }
-    public void btnLogin(View v) {
-        final String username = stuusername.getText().toString();
-        final String password = stupassword.getText().toString();
-
-        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
-            Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        Intent intent = new Intent(this,MainActivity.class);
-        Toast.makeText(Login.this, "登陆成功", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-
-    }
-    public void btnZc(View v) {
-        final String username = stuusername.getText().toString();
-        final String password = stupassword.getText().toString();
-
-        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
-            Toast.makeText(Login.this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        Intent intent = new Intent(this,MainActivity.class);
-        Toast.makeText(Login.this, "注册成功", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-
     }
 }
